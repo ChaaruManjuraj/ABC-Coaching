@@ -53,7 +53,7 @@ export default function CartItems() {
                     return (
                         <li className="item" key={course}>
                             <h3>{course}</h3>
-                            <button className="btn btn-primary trash-btn" id={course} onClick={handleClick}> Remove <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </button>
+                            <button className="btn btn-primary trash-btn" id={course} onClick={handleClick}> Remove <span className="glyphicon glyphicon-trash" aria-hidden="true"></span> </button>
                         </li>
                     )
                 }) : null}

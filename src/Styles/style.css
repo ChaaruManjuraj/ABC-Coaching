@@ -12,6 +12,17 @@
   border-bottom: 1px solid white;
 }
 
+.navbar-main #btn-logout {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.navbar-main #btn-logout:hover {
+  background-color: white;
+  color: black;
+}
+
 .navbar-main .logo-col {
   padding-left: 3rem;
 }

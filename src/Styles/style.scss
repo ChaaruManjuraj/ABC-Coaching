@@ -25,6 +25,13 @@
     margin-top: 1rem;
     border-bottom: 1px solid white;
 
+    #btn-logout {
+        @include button;
+    }
+    #btn-logout:hover {
+        @include button-hover;
+    }
+
     .logo-col {
         padding-left: 3rem;
         #logo {
