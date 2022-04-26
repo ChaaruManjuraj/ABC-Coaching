@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 import EmptyCart from './EmptyCart'
 import CartItems from './CartItems'
+import Navbar from './Navbar'
 
 export default function Cart() {
 
@@ -19,8 +20,11 @@ export default function Cart() {
     }, [courses])
 
   return (
-    <div className="cart-main">
-        {msgToggle ? <EmptyCart /> : <CartItems />}
+    <div>
+        <Navbar />
+        <div className="cart-main">
+            {msgToggle ? <EmptyCart /> : <CartItems />}
+        </div>
     </div>
   )
 }

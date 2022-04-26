@@ -27,7 +27,8 @@ export default function Navbar() {
         sessionStorage.removeItem('email')
         sessionStorage.removeItem('isLoggedIn')
         sessionStorage.removeItem('courses')
-        document.getElementById('btn-logout').style.display = 'block'
+        document.getElementById('btn-logout').style.display = 'none'
+        document.getElementById('greeting').innerHTML = 'Hi, there'
         history('/')
         e.preventDefault()
     }
@@ -50,7 +51,7 @@ export default function Navbar() {
                     <div className="col-md-1">
                         <button onClick={handleLogout} className="btn btn-secondary float-end" id="btn-logout" style={{display: "none"}}>Logout</button>
                     </div>
-                    <div className="col-md-2 cart" style={{textAlign: "right"}}>
+                    <div className="col-md-2 cart" id="greeting" style={{textAlign: "right"}}>
                         { email == '' ? 'Hi, there' : 'Hi, ' + email }
                     </div>
                 </div>

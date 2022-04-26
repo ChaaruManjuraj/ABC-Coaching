@@ -13,7 +13,7 @@ import About from './components/About'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route exact path="/" element={ <Home /> } />
         <Route exact path='/login' element={ <Login /> } />

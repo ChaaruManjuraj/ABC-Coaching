@@ -2,6 +2,8 @@ import React from 'react'
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import Navbar from './Navbar'
+
 export default function Login() {
 
     const [email, setEmail] = useState('')
@@ -38,21 +40,24 @@ export default function Login() {
     }
 
   return (
-    <div className="login-main">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="login-form">
-                        <form>
-                            <div className="form-group">
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email" value={email} onChange={handleChange} />
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={password} onChange={handleChange} />
-                                <button type="submit" id="login" className="btn btn-primary" onClick={handleClick}>Login</button>
-                                <button type="submit" id="register" className="btn btn-primary" onClick={handleClick}>Register</button>
-                                <button type="submit" id="forgot-password" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#forgot-password-modal" onClick={handleClick}>Forgot Password</button>
-                            </div>
-                        </form>      
+      <div>
+        <Navbar />
+        <div className="login-main">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="login-form">
+                            <form>
+                                <div className="form-group">
+                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email" value={email} onChange={handleChange} />
+                                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={password} onChange={handleChange} />
+                                    <button type="submit" id="login" className="btn btn-primary" onClick={handleClick}>Login</button>
+                                    <button type="submit" id="register" className="btn btn-primary" onClick={handleClick}>Register</button>
+                                    <button type="submit" id="forgot-password" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#forgot-password-modal" onClick={handleClick}>Forgot Password</button>
+                                </div>
+                            </form>      
+                        </div>
                     </div>
                 </div>
             </div>
